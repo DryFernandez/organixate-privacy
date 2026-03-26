@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Organixate</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0D0D0D;
+      color: #F5F0E8;
+      line-height: 1.7;
+      padding: 24px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 28px; color: #C9A84C; margin-bottom: 8px; }
+    h2 { font-size: 18px; color: #C9A84C; margin-top: 32px; margin-bottom: 8px; }
+    p, li { font-size: 15px; color: rgba(245, 240, 232, 0.85); margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    .fecha { font-size: 13px; color: rgba(245, 240, 232, 0.5); margin-bottom: 32px; }
+    a { color: #C9A84C; }
+    .divider { height: 1px; background: rgba(201, 168, 76, 0.15); margin: 32px 0; }
+  </style>
+</head>
+<body>
+
+<h1>Política de Privacidad</h1>
+<p class="fecha">Última actualización: 26 de marzo de 2026</p>
+
+<p>Organixate ("la app", "nosotros") es una aplicación de gestión financiera personal desarrollada en República Dominicana. Tu privacidad es importante para nosotros. Esta política explica qué datos recopilamos, cómo los usamos y cuáles son tus derechos.</p>
+
+<div class="divider"></div>
+
+<h2>1. Datos que recopilamos</h2>
+<p>Cuando usas Organixate, almacenamos los siguientes datos asociados a tu cuenta:</p>
+<ul>
+  <li><strong>Información de cuenta:</strong> nombre, correo electrónico y preferencias (idioma, tema, color de acento).</li>
+  <li><strong>Datos financieros:</strong> gastos, ingresos, cuentas, metas, deudas, recurrencias, movimientos, presupuestos, transporte, lista de compras, tarjetas de fidelización y plantillas que tú registras manualmente.</li>
+  <li><strong>Datos de IA:</strong> historial de análisis financieros y conversaciones con el asistente de inteligencia artificial, generados bajo tu solicitud.</li>
+  <li><strong>Estados de cuenta PDF:</strong> cuando importas un PDF, el contenido se envía a un servidor seguro para su procesamiento y no se almacena permanentemente en nuestros servidores.</li>
+</ul>
+
+<h2>2. Cómo usamos tus datos</h2>
+<ul>
+  <li>Para proporcionarte las funciones de la app: registro de transacciones, análisis, reportes, conversiones de divisas, etc.</li>
+  <li>Para generar análisis y recomendaciones financieras personalizadas mediante inteligencia artificial (Google Gemini).</li>
+  <li>Para sincronizar tus datos entre dispositivos a través de tu cuenta.</li>
+</ul>
+<p><strong>No vendemos, compartimos ni alquilamos tus datos personales o financieros a terceros.</strong></p>
+
+<h2>3. Dónde se almacenan tus datos</h2>
+<p>Tus datos se almacenan de forma segura en <strong>Supabase</strong> (infraestructura en la nube con cifrado en tránsito y en reposo). Cada usuario solo puede acceder a sus propios datos gracias a políticas de seguridad a nivel de fila (Row Level Security).</p>
+<p>Los datos también se almacenan localmente en tu dispositivo para funcionamiento offline.</p>
+
+<h2>4. Servicios de terceros</h2>
+<p>Organixate utiliza los siguientes servicios de terceros:</p>
+<ul>
+  <li><strong>Supabase:</strong> autenticación y base de datos — <a href="https://supabase.com/privacy" target="_blank">Política de privacidad</a></li>
+  <li><strong>Google Gemini (vía servidor proxy):</strong> análisis financiero con IA — <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
+  <li><strong>APIs de tasas de cambio:</strong> ExchangeRate-API, Open ER-API — solo consultan tasas USD/DOP, no envían datos personales.</li>
+</ul>
+
+<h2>5. Tus derechos</h2>
+<p>Tienes derecho a:</p>
+<ul>
+  <li><strong>Acceder</strong> a todos tus datos desde la propia app.</li>
+  <li><strong>Modificar</strong> cualquier dato financiero o personal en cualquier momento.</li>
+  <li><strong>Eliminar tu cuenta</strong> y todos tus datos asociados desde Configuración → Eliminar Cuenta. Esta acción es irreversible y borra todos tus datos de nuestros servidores.</li>
+  <li><strong>Exportar</strong> tus datos financieros en formato PDF desde la sección de Reportes.</li>
+</ul>
+
+<h2>6. Seguridad</h2>
+<p>Implementamos las siguientes medidas de seguridad:</p>
+<ul>
+  <li>Cifrado HTTPS en todas las comunicaciones.</li>
+  <li>SSL Pinning para prevenir interceptación de tráfico.</li>
+  <li>Row Level Security (RLS) en base de datos — aislamiento total entre usuarios.</li>
+  <li>API keys sensibles almacenadas exclusivamente en el servidor, nunca en la app.</li>
+  <li>Ofuscación del código en builds de producción.</li>
+  <li>Autenticación segura vía Supabase Auth (email/contraseña y Google OAuth).</li>
+</ul>
+
+<h2>7. Menores de edad</h2>
+<p>Organixate no está dirigida a menores de 13 años. No recopilamos intencionalmente datos de menores de 13 años.</p>
+
+<h2>8. Cambios a esta política</h2>
+<p>Podemos actualizar esta política ocasionalmente. Cualquier cambio se publicará en esta página con la fecha de actualización. Te recomendamos revisarla periódicamente.</p>
+
+<h2>9. Contacto</h2>
+<p>Si tienes preguntas sobre esta política o sobre tus datos, puedes contactarnos en:</p>
+<p><strong>Email:</strong> <a href="mailto:soporte@organixate.com">soporteorganixate@gmail.com</a></p>
+
+<div class="divider"></div>
+<p style="font-size: 12px; color: rgba(245, 240, 232, 0.4); text-align: center; margin-top: 24px;">
+  © 2026 Organixate. Todos los derechos reservados.
+</p>
+
+</body>
+</html>
