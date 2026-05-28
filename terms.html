@@ -1,138 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Términos y Condiciones — Organixate</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0D0D0D;
-      color: #F5F0E8;
-      line-height: 1.7;
-      padding: 24px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    h1 { font-size: 28px; color: #C9A84C; margin-bottom: 8px; }
-    h2 { font-size: 18px; color: #C9A84C; margin-top: 32px; margin-bottom: 8px; }
-    p, li { font-size: 15px; color: rgba(245, 240, 232, 0.85); margin-bottom: 12px; }
-    ul { padding-left: 20px; margin-bottom: 12px; }
-    .fecha { font-size: 13px; color: rgba(245, 240, 232, 0.5); margin-bottom: 32px; }
-    a { color: #C9A84C; }
-    .divider { height: 1px; background: rgba(201, 168, 76, 0.15); margin: 32px 0; }
-    .nav { font-size: 13px; margin-bottom: 24px; }
-    .nav a { text-decoration: none; margin-right: 16px; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Términos y Condiciones — Fynapse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-gradient: radial-gradient(circle at 50% 0%, #1a0826 0%, #09020a 100%);
+        --primary-color: #c084fc;
+        --secondary-color: #c9a84c;
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255, 255, 255, 0.7);
+        --text-tertiary: rgba(255, 255, 255, 0.45);
+        --glass-bg: rgba(255, 255, 255, 0.02);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --glass-hover: rgba(255, 255, 255, 0.05);
+        --accent-glow: 0 8px 32px 0 rgba(147, 51, 234, 0.12);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #09020a;
+        background-image: var(--bg-gradient);
+        color: var(--text-primary);
+        line-height: 1.8;
+        padding: 60px 24px;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .logo {
+        font-family: 'Outfit', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 12px;
+        display: inline-block;
+      }
+      h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+      }
+      .fecha-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--glass-border);
+        color: var(--text-secondary);
+        font-size: 13px;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-bottom: 32px;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+      .nav a {
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--glass-border);
+      }
+      .nav a:hover {
+        color: #ffffff;
+        background: rgba(192, 132, 252, 0.08);
+        border-color: var(--primary-color);
+        box-shadow: 0 0 16px rgba(192, 132, 252, 0.15);
+      }
+      .nav a.active {
+        color: #ffffff;
+        background: rgba(192, 132, 252, 0.12);
+        border-color: var(--primary-color);
+      }
+      .intro-card {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 24px;
+        padding: 32px;
+        margin-bottom: 32px;
+        font-size: 16px;
+        color: var(--text-secondary);
+        border-left: 4px solid var(--primary-color);
+      }
+      section {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--accent-glow);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 24px;
+        padding: 36px;
+        margin-bottom: 32px;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      section:hover {
+        border-color: rgba(192, 132, 252, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px 0 rgba(147, 51, 234, 0.2);
+      }
+      h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      h2::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--secondary-color);
+        box-shadow: 0 0 10px var(--secondary-color);
+      }
+      p, li {
+        font-size: 15px;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+        line-height: 1.8;
+      }
+      p strong, li strong {
+        color: #ffffff;
+        font-weight: 600;
+      }
+      ul {
+        padding-left: 24px;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px dashed var(--primary-color);
+        transition: all 0.2s ease;
+      }
+      a:hover {
+        color: var(--secondary-color);
+        border-bottom-style: solid;
+        border-bottom-color: var(--secondary-color);
+      }
+      .footer {
+        text-align: center;
+        padding-top: 32px;
+        margin-top: 60px;
+        border-top: 1px solid var(--glass-border);
+        color: var(--text-tertiary);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">Fynapse</div>
+        <h1>Términos y Condiciones</h1>
+        <div class="fecha-badge">Última actualización: 27 de mayo de 2026</div>
+        <div class="nav">
+          <a href="./privacy-policy.html">Privacidad</a>
+          <a href="./terms.html" class="active">Términos</a>
+        </div>
+      </header>
 
-<div class="nav">
-  <a href="./index.html">Privacidad</a>
-  <a href="./terms.html">Términos</a>
-</div>
+      <div class="intro-card">
+        Bienvenido a Fynapse. Al descargar, instalar, registrarte o usar esta aplicación móvil,
+        aceptas de forma expresa los presentes Términos y Condiciones. Si no estás de acuerdo con 
+        alguno de los puntos expuestos aquí, te solicitamos no utilizar los servicios de la aplicación.
+      </div>
 
-<h1>Términos y Condiciones</h1>
-<p class="fecha">Última actualización: 26 de marzo de 2026</p>
+      <section>
+        <h2>1. Descripción del servicio</h2>
+        <p>
+          Fynapse es una plataforma digital de finanzas personales diseñada para simplificar el control 
+          de tus transacciones diarias. Permite el registro de transacciones (ingresos, gastos y deudas), 
+          el establecimiento de presupuestos por categoría, el seguimiento de metas de ahorro personalizadas 
+          (incluyendo planes automáticos de ahorro fijo y escalonado) y la organización de recordatorios de 
+          gastos recurrentes.
+        </p>
+        <p>
+          La aplicación ofrece, además, herramientas avanzadas de conversión monetaria, procesamiento inteligente 
+          de estados de cuenta en PDF, generación y exportación de reportes mensuales detallados y soporte interactivo 
+          mediante inteligencia artificial (Daniel AI).
+        </p>
+      </section>
 
-<p>Bienvenido a Organixate. Al descargar, instalar o usar la aplicación, aceptas estos Términos y Condiciones. Si no estás de acuerdo, no utilices la app.</p>
+      <section>
+        <h2>2. Registro y Uso aceptable</h2>
+        <p>Para hacer uso de Fynapse, el usuario se compromete a:</p>
+        <ul>
+          <li>Asegurar que toda la información suministrada durante el registro sea verídica, exacta y actualizada.</li>
+          <li>Mantener a salvo las credenciales de su cuenta y reportar cualquier uso sospechoso de inmediato.</li>
+          <li>No emplear la aplicación para propósitos fraudulentos, actividades ilícitas o conductas contrarias a las leyes de su jurisdicción.</li>
+          <li>Evitar cualquier actividad destinada a dañar, sobrecargar o alterar la infraestructura tecnológica de Supabase u otros servicios integrados.</li>
+          <li>No realizar copias no autorizadas, descompilación, ingeniería inversa ni distribución del código de la app.</li>
+        </ul>
+      </section>
 
-<div class="divider"></div>
+      <section>
+        <h2>3. Datos financieros y Tasas de cambio</h2>
+        <p>
+          Fynapse funciona como un **asistente organizativo y de registro**. Toda la información financiera 
+          es provista por ti directamente o mediante tu vinculación voluntaria de canales autorizados:
+        </p>
+        <ul>
+          <li>Fynapse no realiza transacciones bancarias, débitos ni transferencias directas de fondos en tus cuentas financieras reales.</li>
+          <li>Las tasas de conversión mostradas entre divisas (ej. USD/DOP) son obtenidas de APIs de mercados financieros y se proporcionan con fines únicamente orientativos. No nos responsabilizamos por discrepancias con las tasas oficiales de tu banco emisor.</li>
+          <li>Los reportes analíticos e históricos son proyecciones informativas que dependen de la precisión de los datos ingresados por el usuario.</li>
+        </ul>
+      </section>
 
-<h2>1. Descripción del servicio</h2>
-<p>Organixate es una aplicación de gestión financiera personal que permite registrar gastos, ingresos, cuentas, deudas, metas, presupuestos y otros datos financieros. La app incluye herramientas de análisis con inteligencia artificial, conversión de divisas, importación de estados de cuenta PDF y generación de reportes.</p>
+      <section>
+        <h2>4. Inteligencia Artificial (Daniel AI)</h2>
+        <p>
+          La aplicación cuenta con herramientas conversacionales y generación de tips financieros impulsados por 
+          modelos de Inteligencia Artificial (Google Gemini) a través del asistente Daniel AI:
+        </p>
+        <ul>
+          <li>Las sugerencias de Daniel AI son de carácter **meramente informativo y educativo**, por lo que **no constituyen bajo ningún caso asesoría financiera profesional, fiscal o legal**.</li>
+          <li>Recomendamos siempre consultar con profesionales calificados antes de realizar inversiones de alto riesgo o reestructuraciones financieras de envergadura.</li>
+          <li>Nos reservamos el derecho de limitar el número de mensajes mensuales destinados a la IA según el tipo de suscripción adquirido para evitar el abuso del servicio.</li>
+        </ul>
+      </section>
 
-<h2>2. Uso aceptable</h2>
-<p>Al usar Organixate, te comprometes a:</p>
-<ul>
-  <li>Proporcionar información veraz al crear tu cuenta.</li>
-  <li>No usar la app para actividades ilegales, fraudulentas o que violen leyes aplicables.</li>
-  <li>No intentar acceder a datos de otros usuarios ni vulnerar los sistemas de seguridad.</li>
-  <li>No realizar ingeniería inversa, descompilar o modificar la app.</li>
-  <li>No usar la app para lavar dinero o financiar actividades ilícitas.</li>
-</ul>
+      <section>
+        <h2>5. Planes y Suscripciones (Pagos)</h2>
+        <p>Fynapse cuenta con tres modalidades de acceso estructuradas para acomodarse a tus necesidades:</p>
+        <ul>
+          <li>
+            <strong>Plan Gratis:</strong> Acceso a herramientas básicas de registro local, presupuestos y control diario, sin costo.
+          </li>
+          <li>
+            <strong>Plan Plus ($4.99 USD mensuales):</strong> Acceso ilimitado a múltiples cuentas, reportes exportables en PDF, widgets para la pantalla de inicio y hasta 30 consultas mensuales de Inteligencia Artificial con Daniel AI.
+          </li>
+          <li>
+            <strong>Plan Premium ($9.99 USD mensuales o $89.99 USD al año):</strong> Incluye todas las ventajas del Plan Plus, soporte prioritario, hasta 100 consultas mensuales de Inteligencia Artificial con Daniel AI y sincronización automática de estados de cuenta mediante vinculación de correo de Gmail.
+          </li>
+        </ul>
+        <p>
+          Las tarifas se facturarán mediante las plataformas oficiales de cobro (Google Play Store y Apple App Store). Cualquier reclamación, cambio de suscripción o solicitud de reembolso se gestionará de acuerdo a las directrices de estas tiendas.
+        </p>
+      </section>
 
-<h2>3. Cuenta de usuario</h2>
-<ul>
-  <li>Eres responsable de mantener la confidencialidad de tu contraseña y cuenta.</li>
-  <li>Eres responsable de toda actividad que ocurra bajo tu cuenta.</li>
-  <li>Debes notificarnos inmediatamente si sospechas uso no autorizado de tu cuenta.</li>
-  <li>Nos reservamos el derecho de suspender o eliminar cuentas que violen estos términos.</li>
-</ul>
+      <section>
+        <h2>6. Vinculación con Gmail (Google OAuth)</h2>
+        <p>
+          Si activas voluntariamente la sincronización con Gmail en tu Plan Premium, Fynapse accederá de manera 
+          automatizada y bajo estrictas normas de seguridad para escanear alertas de transacciones bancarias:
+        </p>
+        <ul>
+          <li>El usuario retiene el derecho de desconectar esta sincronización desde la app en cualquier momento.</li>
+          <li>La transferencia de información recibida de las APIs de Google se adhiere a los términos y requisitos de Uso Limitado de la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>.</li>
+        </ul>
+      </section>
 
-<h2>4. Datos financieros</h2>
-<p>Organixate es una herramienta de <strong>registro y organización</strong>. Los datos financieros que ingresas son proporcionados por ti y bajo tu responsabilidad.</p>
-<ul>
-  <li>La app no se conecta directamente a bancos ni instituciones financieras.</li>
-  <li>Las tasas de cambio mostradas son referenciales y pueden diferir de las tasas oficiales de bancos en República Dominicana.</li>
-  <li>Los análisis y recomendaciones generados por IA son informativos y <strong>no constituyen asesoría financiera profesional</strong>.</li>
-  <li>No somos responsables de decisiones financieras tomadas basándose en la información de la app.</li>
-</ul>
+      <section>
+        <h2>7. Propiedad intelectual</h2>
+        <p>
+          Todos los derechos de propiedad intelectual relativos a Fynapse, incluyendo su código fuente, interfaces de 
+          usuario, logotipos, base de datos, textos legales, diseño gráfico y marca registrada, pertenecen exclusivamente 
+          a sus desarrolladores.
+        </p>
+        <p>
+          Los datos financieros aportados por el usuario continúan siendo propiedad exclusiva del mismo. El usuario otorga 
+          a Fynapse una licencia limitada para procesar, organizar y estructurar dichos datos únicamente para la prestación 
+          eficiente del servicio.
+        </p>
+      </section>
 
-<h2>5. Inteligencia artificial</h2>
-<p>Organixate utiliza Google Gemini para generar análisis financieros, tips y procesar estados de cuenta PDF.</p>
-<ul>
-  <li>Las respuestas de IA son generadas automáticamente y pueden contener errores o imprecisiones.</li>
-  <li>La IA no reemplaza el consejo de un profesional financiero certificado.</li>
-  <li>Los datos enviados a la IA se procesan a través de nuestro servidor seguro y están sujetos a la <a href="https://policies.google.com/terms" target="_blank">política de Google</a>.</li>
-</ul>
+      <section>
+        <h2>8. Limitación de responsabilidad y Garantías</h2>
+        <p>
+          Fynapse se ofrece "tal como está" (as is) y "según disponibilidad". En la máxima medida permitida por la legislación aplicable:
+        </p>
+        <ul>
+          <li>No garantizamos que la aplicación funcione de forma ininterrumpida o esté libre de errores.</li>
+          <li>No nos hacemos responsables por pérdidas monetarias, malas inversiones o perjuicios financieros sufridos a causa de decisiones tomadas basándose en el análisis de la app o los consejos de la IA.</li>
+          <li>El usuario asume el riesgo asociado a la pérdida de información en caso de no sincronizar su cuenta de manera en línea o de realizar un borrado de datos locales en su dispositivo.</li>
+        </ul>
+      </section>
 
-<h2>6. Propiedad intelectual</h2>
-<ul>
-  <li>Organixate, su código, diseño, logotipos, iconos y marca son propiedad exclusiva de sus creadores.</li>
-  <li>No se te otorga ninguna licencia o derecho sobre la propiedad intelectual de la app más allá del uso personal.</li>
-  <li>Queda prohibida la reproducción, distribución o modificación de la app sin autorización escrita.</li>
-  <li>Los datos financieros que registras son de tu propiedad. Organixate no reclama derechos sobre ellos.</li>
-</ul>
+      <section>
+        <h2>9. Ley aplicable y Jurisdicción</h2>
+        <p>
+          Estos términos se rigen e interpretan de conformidad con las leyes vigentes de la <strong>República Dominicana</strong>. 
+          Cualquier controversia relacionada con el uso de la aplicación será resuelta ante los tribunales correspondientes de la República Dominicana.
+        </p>
+      </section>
 
-<h2>7. Disponibilidad del servicio</h2>
-<ul>
-  <li>No garantizamos disponibilidad ininterrumpida del servicio. Puede haber mantenimiento o interrupciones.</li>
-  <li>La funcionalidad offline permite acceso parcial sin conexión, pero la sincronización requiere internet.</li>
-  <li>Nos reservamos el derecho de modificar, suspender o descontinuar funciones sin previo aviso.</li>
-</ul>
+      <section>
+        <h2>10. Protección de Datos y Ley 172-13</h2>
+        <p>
+          Fynapse cumple rigurosamente con la <strong>Ley No. 172-13 sobre Protección de Datos Personales</strong> de la República 
+          Dominicana, así como con estándares internacionales adaptados de minimización y consentimiento del GDPR. Para conocer 
+          el manejo de tu información personal, consulta detalladamente nuestra <a href="./privacy-policy.html">Política de Privacidad</a>.
+        </p>
+      </section>
 
-<h2>8. Limitación de responsabilidad</h2>
-<p>Organixate se proporciona "tal como está" (as is). En la medida permitida por la ley:</p>
-<ul>
-  <li>No garantizamos que la app esté libre de errores o funcione sin interrupciones.</li>
-  <li>No somos responsables por pérdidas financieras derivadas del uso de la app o de las recomendaciones de IA.</li>
-  <li>No somos responsables por daños indirectos, incidentales o consecuentes.</li>
-  <li>Nuestra responsabilidad total no excederá el monto que hayas pagado por el servicio (si aplica).</li>
-</ul>
+      <section>
+        <h2>11. Soporte y Contacto</h2>
+        <p>Si tienes preguntas adicionales acerca de estos Términos o necesitas soporte con tu suscripción, puedes escribirnos a:</p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:soportefynapse@gmail.com">soportefynapse@gmail.com</a>
+        </p>
+      </section>
 
-<h2>9. Planes y pagos</h2>
-<p>Actualmente Organixate es gratuita. Si se introducen planes de pago en el futuro:</p>
-<ul>
-  <li>Los precios y condiciones se comunicarán con antelación.</li>
-  <li>Los pagos se procesarán a través de Google Play o Apple App Store.</li>
-  <li>Las políticas de reembolso se regirán por las tiendas de aplicaciones correspondientes.</li>
-</ul>
-
-<h2>10. Ley aplicable</h2>
-<p>Estos términos se rigen por las leyes de la <strong>República Dominicana</strong>. Cualquier disputa se resolverá ante los tribunales competentes de la República Dominicana.</p>
-
-<h2>11. Protección de datos (cumplimiento legal)</h2>
-<p>Organixate cumple con:</p>
-<ul>
-  <li><strong>Ley 172-13</strong> de la República Dominicana sobre Protección de Datos Personales.</li>
-  <li>Principios del <strong>GDPR</strong> (Reglamento General de Protección de Datos de la UE) en cuanto a minimización de datos, consentimiento y derecho al olvido.</li>
-  <li>Requisitos de <strong>Google Play</strong> sobre privacidad y seguridad de datos.</li>
-</ul>
-<p>Para más detalles, consulta nuestra <a href="./index.html">Política de Privacidad</a>.</p>
-
-<h2>12. Modificaciones</h2>
-<p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios se publicarán en esta página con la fecha actualizada. El uso continuado de la app tras los cambios constituye aceptación de los nuevos términos.</p>
-
-<h2>13. Contacto</h2>
-<p>Para consultas sobre estos términos:</p>
-<p><strong>Email:</strong> <a href="mailto:soporte@organixate.com">soporte@organixate.com</a></p>
-
-<div class="divider"></div>
-<p style="font-size: 12px; color: rgba(245, 240, 232, 0.4); text-align: center; margin-top: 24px;">
-  © 2026 Organixate. Todos los derechos reservados.
-</p>
-
-</body>
+      <div class="footer">
+        <p>© 2026 Fynapse. Todos los derechos reservados. Desarrollado en República Dominicana.</p>
+      </div>
+    </div>
+  </body>
 </html>
